@@ -1,0 +1,29 @@
+services:
+  parrot_service:
+    container_name: parrot_service
+    image: devops-sample-django-app
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      DJANGO_DB_HOST: db
+      DJANGO_DB_NAME: app
+      DJANGO_DB_USER: worker
+      DJANGO_DB_PASS: worker
+      DJANGO_DB_PORT: "5432"
+      DJANGO_DEBUG: "False"
+    restart: always
+
+  db:
+    image: postgres:17
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: worker
+      POSTGRES_PASSWORD: worker
+      POSTGRES_DB: app
+    volumes:
+      - ./postgres_volume/:/var/lib/postgresql/data
