@@ -59,13 +59,35 @@ ____
       CREATE USER worker WITH PASSWORD 'worker';
       RANT ALL PRIVILEGES ON DATABASE app TO worker;
 ```
+- install pyenv
+```shell
+       brew install pyenv
+```
+- edit the .zshrc file:
+```shell
+      nano ~/.zshrc
+```
+```shell
+   export PATH="$HOME/.pyenv/bin:$PATH"
+   eval "$(pyenv init --path)"
+   eval "$(pyenv init -)"
+   eval "$(pyenv virtualenv-init -)"
+```
+- apply the changes
+```shell
+     source ~/.zshrc
+```
 - install Python 3.8
 ```shell
-      pyenv install 3.8
+     pyenv install 3.8
+```
+- or create virtualenv with needed python version in project's directory
+```shell
+     pyenv virtualenv 3.8.20 myenv
 ```
 - install libs 
 ```shell
-      pip3 install -r requirements.txt
+     pip3 install -r requirements.txt
 ```
 
 * set environment export for variables:
