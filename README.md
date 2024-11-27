@@ -65,7 +65,7 @@ ____
 ```
 - edit the .zshrc file:
 ```shell
-      nano ~/.zshrc
+       nano ~/.zshrc
 ```
 ```shell
    export PATH="$HOME/.pyenv/bin:$PATH"
