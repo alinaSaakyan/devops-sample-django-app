@@ -20,6 +20,7 @@ ____
 
 <h3>Deployment with Docker 🐳</h3>
 ____
+
 - install Docker
 
 - start up Docker container (in project's directory run:)
