@@ -24,7 +24,7 @@ ____
 
 - install Docker
 
-- start up Docker container (in project's directory run:)
+- start up Docker container (in project's directory run):
 ```shell
       docker compose up -d
 ```
@@ -88,12 +88,12 @@ ____
    source ~/.zshrc
 ```
 
-* migrate database:
+* migrate database (in project's directory run):
 ```shell
 python3 manage.py migrate
 ```
 
-* start application:
+* start application (in project's directory run):
 ```shell
 python3 manage.py runserver 0.0.0.0:8000
 ```
