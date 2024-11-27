@@ -24,11 +24,15 @@ ____
 
 - install Docker
 
-- start up Docker container (in project's directory run):
+- build an image (run in project's directory):
+```shell
+      docker build -t app .
+```
+
+- start a container (run in project's directory):
 ```shell
       docker-compose up -d
 ```
-
 <h3>Local Deployment</h3>
 
 ____
