@@ -19,6 +19,7 @@ ____
 - django-prometheus 2.2.0
 
 <h3>Deployment with Docker 🐳</h3>
+
 ____
 
 - install Docker
