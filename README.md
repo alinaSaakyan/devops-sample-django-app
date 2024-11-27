@@ -33,6 +33,8 @@ ____
 ```shell
       docker-compose up -d
 ```
+
+- open  http://localhost:8000
 <h3>Local Deployment</h3>
 
 ____
