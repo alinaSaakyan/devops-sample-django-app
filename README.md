@@ -11,34 +11,78 @@ Sample Python application on Django with PostgreSQL database.
 
 ____
 
-
+- python 3.8
+- PostgreSQL
 - django 4.0.1
 - Pillow 9.0.0
 - psycopg2-binary 2.9.3
 - django-prometheus 2.2.0
 
-<h3>Deployment</h3>
+<h3>Deployment with Docker 🐳</h3>
+____
+- install Docker
+- start up Docker container (in project's directory run:)
+```shell
+      docker compose up -d
+```
+<h3>Local Deployment</h3>
 
 ____
 
 
-
+- install and start PostgreSQL
+```shell
+      brew install postgresql
+```
+```shell
+      brew services start postgresql
+```
+```shell
+      psql postgres
+```
+- create database
+```shell
+      CREATE DATABASE app;
+```
+- create user and set password
+```shell
+      CREATE USER worker WITH PASSWORD 'worker';
+      RANT ALL PRIVILEGES ON DATABASE app TO worker;
+```
 - install Python 3.8
+```shell
+      pyenv install 3.8
+```
 - install libs 
 ```shell
       pip3 install -r requirements.txt
 ```
 
-* Set environment export for variables:
+* set environment export for variables:
 ```yaml
-      DJANGO_DB_HOST: db
+      DJANGO_DB_HOST: localhost
       DJANGO_DB_NAME: app
       DJANGO_DB_USER: worker
       DJANGO_DB_PASS: worker
       DJANGO_DB_PORT: "5432"
       DJANGO_DEBUG: "False"
 ```
-
+- edit the .zshrc file:
+```shell
+      nano ~/.zshrc
+```
+```shell
+   export DJANGO_DB_HOST=localhost
+   export DJANGO_DB_NAME=app
+   export DJANGO_DB_USER=worker
+   export DJANGO_DB_PASS=worker
+   export DJANGO_DB_PORT="5432"
+   export DJANGO_DEBUG="False"
+```
+- apply the changes
+```shell
+   source ~/.zshrc
+```
 
 * migrate database:
 ```shell
