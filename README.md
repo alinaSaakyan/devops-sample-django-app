@@ -26,7 +26,7 @@ ____
 
 - start up Docker container (in project's directory run):
 ```shell
-      docker compose up -d
+      docker-compose up -d
 ```
 
 <h3>Local Deployment</h3>
