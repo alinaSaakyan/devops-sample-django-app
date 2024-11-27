@@ -21,10 +21,12 @@ ____
 <h3>Deployment with Docker 🐳</h3>
 ____
 - install Docker
+
 - start up Docker container (in project's directory run:)
 ```shell
       docker compose up -d
 ```
+
 <h3>Local Deployment</h3>
 
 ____
